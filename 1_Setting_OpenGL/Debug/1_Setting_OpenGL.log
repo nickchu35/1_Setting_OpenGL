@@ -1,15 +1,21 @@
-﻿已經開始建置於 3/23/2015 3:40:12 PM。
+﻿已經開始建置於 3/23/2015 4:02:58 PM。
      1>節點 2 (Build 目標) 上的專案 "D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\1_Setting_OpenGL\1_Setting_OpenGL.vcxproj"。
      1>ClCompile:
-         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Core\GameModels.cpp
-         GameModels.cpp
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\nickchu\college\research_chen\opengl\opengl_tutorial\1_setting_opengl\1_setting_opengl\main.cpp(2): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+     1>d:\nickchu\college\research_chen\opengl\opengl_tutorial\1_setting_opengl\1_setting_opengl\main.cpp(3): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+     1>d:\nickchu\college\research_chen\opengl\opengl_tutorial\1_setting_opengl\1_setting_opengl\main.cpp(4): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+     1>d:\nickchu\college\research_chen\opengl\opengl_tutorial\1_setting_opengl\1_setting_opengl\main.cpp(5): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+     1>d:\nickchu\college\research_chen\opengl\opengl_tutorial\1_setting_opengl\1_setting_opengl\main.cpp(24): warning C4305: '引數' : 從 'double' 轉換為 'GLclampf'，是由較大的型別轉換為較小的型別，可能導致資料遺失
        Link:
          D:\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\Debug\1_Setting_OpenGL.exe" /INCREMENTAL /NOLOGO /LIBPATH:Dependencies /LIBPATH:Dependencies\freeglut /LIBPATH:Dependencies\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\Debug\1_Setting_OpenGL.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\Debug\1_Setting_OpenGL.lib" /MACHINE:X86 Debug\GameModels.obj
          Debug\Shader_Loader.obj
          Debug\main.obj
+         LINK : 最後的累加連結找不到或未建置 D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\Debug\1_Setting_OpenGL.exe，正在執行完整連結
          1_Setting_OpenGL.vcxproj -> D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\Debug\1_Setting_OpenGL.exe
      1>專案 "D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\1_Setting_OpenGL\1_Setting_OpenGL.vcxproj" (Build 目標) 建置完成。
 
 建置成功。
 
-經過時間 00:00:04.25
+經過時間 00:00:12.13
