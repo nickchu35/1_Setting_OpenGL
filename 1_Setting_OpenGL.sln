@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1_Setting_OpenGL", "1_Setting_OpenGL\1_Setting_OpenGL.vcxproj", "{5C2D49E3-4C3C-4374-9AEC-77FF5A3914D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5A319A08-2652-404E-9731-2857E3BD4811}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C2D49E3-4C3C-4374-9AEC-77FF5A3914D6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5C2D49E3-4C3C-4374-9AEC-77FF5A3914D6}.Debug|Win32.Build.0 = Debug|Win32
+		{5C2D49E3-4C3C-4374-9AEC-77FF5A3914D6}.Release|Win32.ActiveCfg = Release|Win32
+		{5C2D49E3-4C3C-4374-9AEC-77FF5A3914D6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
