@@ -1,4 +1,4 @@
-﻿已經開始建置於 3/23/2015 1:49:03 AM。
+﻿已經開始建置於 3/23/2015 3:40:12 PM。
      1>節點 2 (Build 目標) 上的專案 "D:\Nickchu\college\Research_Chen\openGL\OpenGL_tutorial\1_Setting_OpenGL\1_Setting_OpenGL\1_Setting_OpenGL.vcxproj"。
      1>ClCompile:
          D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Core\GameModels.cpp
@@ -12,4 +12,4 @@
 
 建置成功。
 
-經過時間 00:00:05.68
+經過時間 00:00:04.25

@@ -14,6 +14,8 @@ GLuint program;
 GLuint vertex_shader, fragment_shader;
 GLuint vertex_array_object;
 
+int shape;
+
 void renderScene(void)
 {
 	// tells OpenGL to clear its buffers. In our case Depth and Color. To clear them simultaneously we OR them
@@ -22,18 +24,32 @@ void renderScene(void)
     glClearColor(0.0, 0.3, 0.3, 1.0);
 	// swaps between back buffer and front buffer. Remember that we are using double buffering.
 
-	glBindVertexArray(gameModels->GetModel("triangle1"));
+	switch(shape){
+		case 1:
+			glBindVertexArray(gameModels->GetModel("rectangle1"));
+		case 2:
+			glBindVertexArray(gameModels->GetModel("triangle1"));
+		case 3:
+			glBindVertexArray(gameModels->GetModel("sphere1"));
+	}
+
 	//use the created program
 	glUseProgram(program);
 	// The program in question is a container for the shaders we are going to use in drawing the scene. 
 	// You can switch programs between objects drawn, if you want o use different shaders for different objects.
-
-	// draw 3 vertices as triangles
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	switch(shape){
+		case 1:
+			// draw 4 vertices as rectangles
+			glDrawArrays(GL_QUADS, 0, 4);
+		case 2:
+			// draw 3 vertices as triangles
+			glDrawArrays(GL_TRIANGLES, 0, 3);
+		case 3:
+			glDrawArrays(GL_TRIANGLE_STRIP, 0, 3200);
+	}
 	// the first argument is the drawing mode or the primitive(points, lines, triangles, triangle strip, etc.),
 	// the third is the array of vertices in question and the second is the index from which the vertices will 
 	// be drawn inside argument 3.
-
     glutSwapBuffers();
 }
 
@@ -47,7 +63,15 @@ void Init(){
 	glEnable(GL_DEPTH_TEST);
  
 	gameModels = new Models::GameModels();
-	gameModels->CreateTriangleModel("triangle1");
+
+	switch(shape){
+		case 1:
+			gameModels -> CreateRectangleModel("rectangle1");
+		case 2:
+			gameModels -> CreateTriangleModel("triangle1");
+		case 3:
+			gameModels -> CreateSphereModel("sphere1");
+	}
 
     //load and compile shaders
 	Core::Shader_Loader shaderLoader;// = Core::Shader_Loader::Shader_Loader();
@@ -58,6 +82,9 @@ void Init(){
 }
 
 int main(int argc, char** argv){
+
+	shape = 3; // 1 rect, 2 tri, 3 sphere
+
 	glutInit(&argc, argv);										// initialize GLUT library
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);  // determine the OpenGL display mode for the new window
 	// GLUT_DEPTH tells OpenGL that we want a depth buffer (also called a Z buffer) 
@@ -66,7 +93,16 @@ int main(int argc, char** argv){
 	// GLUT_RGBA tells OpenGL how to allocate a 32-bit Framebuffer for the four 8-bit color channels: Red, Green, Blue, and Alpha.
 	glutInitWindowPosition(300, 100);//optional
 	glutInitWindowSize(800, 600); //optional
-	glutCreateWindow("Drawing my first triangle!");
+
+	switch(shape){
+		case 1:
+			glutCreateWindow("Drawing my first rectangle!");
+		case 2:
+			glutCreateWindow("Drawing my first triangle!");
+		case 3:
+			glutCreateWindow("Drawing my first sphere!");
+	}
+
 	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
 
 	glewInit();

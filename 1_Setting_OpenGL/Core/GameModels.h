@@ -24,7 +24,8 @@ namespace Models
 		GameModels();
 		~GameModels();
 		void CreateTriangleModel(const std::string& gameModelName);
-		void CreateSphereModel(const std::string& gameModelName, const int num);
+		void CreateRectangleModel(const std::string& gameModelName);
+		void CreateSphereModel(const std::string& gameModelName);
 		void DeleteModel(const std::string& gameModelName);
 		unsigned int GetModel(const std::string& gameModelName);
 		private:
